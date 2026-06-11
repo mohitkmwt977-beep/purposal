@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Simran ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    overflow:hidden;
+
+    background: linear-gradient(
+        135deg,
+        #ff9a9e,
+        #fad0c4,
+        #ffd1ff
+    );
+}
+
+.container{
+    margin-top:120px;
+    position:relative;
+    z-index:10;
+}
+
+h1{
+    color:white;
+    font-size:55px;
+    text-shadow:2px 2px 8px black;
+}
+
+h2{
+    color:white;
+    text-shadow:1px 1px 5px black;
+}
+
+button{
+    font-size:22px;
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+#result{
+    width:80%;
+    margin:auto;
+    margin-top:25px;
+    line-height:1.8;
+    font-size:22px;
+}
+
+/* Hearts Animation */
+
+.heart{
+    position:absolute;
+    color:red;
+    font-size:25px;
+    animation:float 10s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+/* Flowers */
+
+.flower{
+    position:absolute;
+    font-size:28px;
+    animation:fall 12s linear infinite;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Hi Simran ❤️</h1>
+
+<h2>
+I have only one question for you...
+</h2>
+
+<h2>
+Do you love me?
+</h2>
+
+<div id="buttons">
+
+<button onclick="yesAnswer()">
+Yes ❤️
+</button>
+
+<button onclick="noAnswer()">
+No 🙂
+</button>
+
+</div>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script>
+
+function yesAnswer(){
+
+document.getElementById("buttons").style.display="none";
+
+document.getElementById("result").innerHTML=
+
+"❤️ Simran, thank you for saying YES. You are one of the most special people in my life. Your smile makes my day better, your presence makes every moment beautiful, and your happiness means a lot to me. I promise to always respect you, support you, and be honest with you. This moment will always stay close to my heart.And LOVE U TO ❤️";
+}
+
+function noAnswer(){
+
+document.getElementById("buttons").style.display="none";
+
+document.getElementById("result").innerHTML=
+
+"😊 No Problem, We Can Still Be Friends.";
+}
+
+
+/* Hearts */
+
+for(let i=0;i<30;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.animationDuration=
+(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+}
+
+/* Flowers */
+
+for(let i=0;i<20;i++){
+
+let flower=document.createElement("div");
+
+flower.className="flower";
+
+flower.innerHTML="🌸";
+
+flower.style.left=Math.random()*100+"%";
+
+flower.style.animationDuration=
+(6+Math.random()*8)+"s";
+
+document.body.appendChild(flower);
+}
+
+</script>
+
+</body>
+</html>
